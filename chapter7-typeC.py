@@ -72,3 +72,100 @@ else:
 age = int(input("Enter your age: "))
 age_after_10_years = age + 10
 print(f"In 10 years, You will be {age_after_10_years} years old!")
+
+#chapter7-q11.py
+y = float(input("How many years? "))
+
+d = y * 365
+h = d * 24
+m = h * 60
+s = m * 60
+
+print(y, "years is:")
+print(d, "days")
+print(h, "hours")
+print(m, "minutes")
+print(s, "seconds")
+
+#chapter7-q12.py
+#samplerun1
+a = int(input(" Random number between 0 and 5 (A): "))
+b = int(input(" Random number between 0 and 5 (B): "))
+c = a**b
+print("A to the power B = ", c)
+
+#samplerun2
+a = int(input(" Random number between 0 and 5 (A): "))
+b = int(input(" Random number between 0 and 5 (B): "))
+c = a**b
+print("A to the power B = ", c)
+
+#samplerun3
+a = int(input(" Random number between 0 and 5 (A): "))
+b = int(input(" Random number between 0 and 5 (B): "))
+c = a**b
+print("A to the power B = ", c)
+
+#chapter7-q13.py
+import random
+import statistics
+
+start = int(input("Enter start: "))
+stop = int(input("Enter stop: "))
+step = int(input("Enter step: "))
+
+a = random.randrange(start, stop, step)
+b = random.randrange(start, stop, step)
+c = random.randrange(start, stop, step)
+d = random.randrange(start, stop, step)
+e = random.randrange(start, stop, step)
+f = random.randrange(start, stop, step)
+
+print("Generated Numbers:")
+print(a, b, c, d, e, f)
+
+seq = (a, b, c, d, e, f)
+
+mean = statistics.mean(seq)
+median = statistics.median(seq)
+mode = statistics.mode(seq)
+
+print("Mean =", mean)
+print("Median =", median)
+print("Mode =", mode)
+
+#chapter7-q14.py
+import random
+
+def generate_random_divisible_by_5():
+    random_numbers = []
+    while len(random_numbers) < 3:
+        num = random.randint(100, 199)
+        if num % 5 == 0:
+            random_numbers.append(num)
+    return random_numbers
+
+try:
+    random_numbers = generate_random_divisible_by_5()
+    print("Generated random numbers divisible by 5:", random_numbers)
+
+except Exception as e:
+    print(f"Error: {e}")
+    
+#chapter7-q15.py
+import secrets
+
+def generate_otp():
+    return secrets.randbelow(900000) + 100000
+
+try:
+    random_otp = generate_otp()
+    print("Generated OTP:", random_otp)
+    
+except Exception as e:
+    print(f"Error: {e}")
+
+#chapter7-q18.py
+a = int(input("enter area of sphere: "))
+r = math.sqrt(a/4*3.14)
+print("the radius of the sphere is: ", r)
